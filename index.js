@@ -89,4 +89,8 @@ io.engine.on("connection_error", (err) => {
   console.log(err.context);
 });
 
+app.use("/", (req, res, next) => {
+  res.json("Side-Stacker-Node")
+})
+
 server.listen(port, () => console.log(`Listening on port ${port}`));
